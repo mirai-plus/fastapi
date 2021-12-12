@@ -6,8 +6,8 @@ from pydantic.types import conint
 
 
 class PostBase(BaseModel):
-    title: str
-    content: str
+    name: str
+    description: str
     published: bool = True
 
 
