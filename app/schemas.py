@@ -64,3 +64,27 @@ class TokenData(BaseModel):
 class Vote(BaseModel):
     post_id: int
     dir: conint(le=1)
+
+class HealthCenters(BaseModel):
+    id: int
+    nome: str
+    struttura: str
+    indirizzo: str
+    telefono: str
+    email: str
+    sito: str
+    lat: float
+    lng: float
+    descrizione_breve: str
+    descrizione: str
+    orari: str
+    foto: str
+    foto_thumb: str
+    foto_thumb_2: str
+    created_at: datetime
+    owner_id: int
+    owner: UserOut
+
+    class Config:
+        orm_mode = True
+    
